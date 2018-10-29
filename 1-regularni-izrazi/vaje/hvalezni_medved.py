@@ -1,3 +1,4 @@
+import re
 ###############################################################################
 # Hvaležni medved
 #
@@ -25,7 +26,9 @@ medved. Zvrhano zibelko sladkih hrušk mi je prinesel za en sam izdrt trn"."""
 # >>> find_words(test_text, 'de')
 # {'izdere', 'debel', 'oddide', 'začudeno'}
 ###############################################################################
-
+def find_words(besedilo, niz):
+    izraz = r'\w+'+ niz + r'\w+'
+    return set(re.findall(izraz, besedilo, flags = 0))
 
 ###############################################################################
 # 2) Sestavite funkcijo [find_prefix], ki vrne množico vseh besed, ki se

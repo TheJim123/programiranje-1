@@ -1,0 +1,5 @@
+označi tekst + alt + movement keys: ti premakne označen tekst gor/dol
+ctrl + alt + označi vrstice : pišeš z več kurzorji (v več vrsticah) hkrati
+alt + enter : označi vse matching besede
+ctrl + h : odpre replacement window
+ctrl + alt + enter : zamenja vse pojavitve 
