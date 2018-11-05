@@ -9,7 +9,11 @@
  - : int = 3
 [*----------------------------------------------------------------------------*)
 
-let rec penultimate_element = ()
+let rec penultimate_element list = 
+  match list with
+  | [] | x :: [] -> failwith "List too short"
+  | x :: y :: [] -> x
+  | x :: xs -> penultimate_element (ys)
 
 (*----------------------------------------------------------------------------*]
  Funkcija [get k list] poišče [k]-ti element v seznamu [list]. Številčenje
@@ -20,7 +24,13 @@ let rec penultimate_element = ()
  - : int = 1
 [*----------------------------------------------------------------------------*)
 
-let rec get = ()
+let rec get k list =
+  match k, list with
+   _, [] -> failwith "List too short"
+   k, x :: xs when k <= 0 -> x
+   k, x :: xs -> get (k -1) xs
+   
+
 
 (*----------------------------------------------------------------------------*]
  Funkcija [double] podvoji pojavitve elementov v seznamu.

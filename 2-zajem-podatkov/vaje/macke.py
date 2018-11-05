@@ -66,9 +66,14 @@ def read_file_to_string(directory, filename):
 # oglasa. Funkcija naj vrne seznam nizov.
 
 
-def page_to_ads(TODO):
+def page_to_ads(directory, filename):
     '''Split "page" to a list of advertisement blocks.'''
-    return TODO
+    filee = directory+'/'+filename
+    with open(filee, encoding='utf-8') as f:
+        text = "".join(line for line in f)
+        print(text)
+        regx = re.compile(r'^<div class="ad">|<div class="ad featured">.*</div>\n\n\n\n$', re.DOTALL)
+        return regx.findall(text)
 
 # Definirajte funkcijo, ki sprejme niz, ki predstavlja oglas, in izlušči
 # podatke o imenu, ceni in opisu v oglasu.
