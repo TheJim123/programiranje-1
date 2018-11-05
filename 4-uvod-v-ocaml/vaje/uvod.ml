@@ -11,9 +11,9 @@
 
 let rec penultimate_element list = 
   match list with
-  | [] | x :: [] -> failwith "List too short"
+  | [] | _ :: [] -> failwith "List too short"
   | x :: y :: [] -> x
-  | x :: xs -> penultimate_element (ys)
+  | x :: xs -> penultimate_element (xs)
 
 (*----------------------------------------------------------------------------*]
  Funkcija [get k list] poišče [k]-ti element v seznamu [list]. Številčenje
@@ -26,11 +26,15 @@ let rec penultimate_element list =
 
 let rec get k list =
   match k, list with
-   _, [] -> failwith "List too short"
-   k, x :: xs when k <= 0 -> x
-   k, x :: xs -> get (k -1) xs
-   
+  | _, [] -> failwith "List too short"
+  | k, x :: xs when k <= 0 -> x
+  | k, x :: xs -> get (k -1) xs
+(* Lahko tudi takole: *)
 
+let rec lepsi_get k = function
+  | [] -> failwith "List is too short!"   
+  | x :: xs when k <= 0 -> x
+  | x :: xs -> lepsi_get (k - 1) xs
 
 (*----------------------------------------------------------------------------*]
  Funkcija [double] podvoji pojavitve elementov v seznamu.
@@ -39,7 +43,9 @@ let rec get k list =
  - : int list = [1; 1; 2; 2; 3; 3]
 [*----------------------------------------------------------------------------*)
 
-let rec double = ()
+let rec double list = function
+  | [] -> []
+  | x :: xs -> [x; x] @ double xs 
 
 (*----------------------------------------------------------------------------*]
  Funkcija [divide k list] seznam razdeli na dva seznama. Prvi vsebuje prvih [k]
@@ -52,7 +58,12 @@ let rec double = ()
  - : int list * int list = ([1; 2; 3; 4; 5], [])
 [*----------------------------------------------------------------------------*)
 
-let rec divide = ()
+let rec divide k list = 
+  match k, list with
+  | k, list when (k <= 0) -> ([], list)
+  | k, [] -> ([], [])
+  | k, x :: xs -> let (left_list, right_list) = divide (k-1) xs in (x :: left_list, right_list)
+
 
 (*----------------------------------------------------------------------------*]
  Funkcija [delete k list] iz seznama izbriše [k]-ti element. V primeru
