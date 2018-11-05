@@ -79,10 +79,23 @@ for ujemanje in podatki:
 </tr>
 
 vzorec = re.compile(
-    r'<img width=.*?alt="Anime: (?P<naslov>.*?)" class=.*?'
-    r'<div class=".*?"><a class=".*?" href=".*?" id="(?P<id>.*?)" rel=".*?">(?P<naslov>.*?)</a><a href=".*?" class=".*?" title=".*?".*?>.*?(?P<tip> TV \(\d+?\))<br>.*?'
+    r'<span class=.*?>(?P<rank>\d+?).*?'
+    r'<a.*?id="(?P<id>#area\d+?)".*?'
+    r'<.*?alt="Anime:(?P<naslov>.*?)".*?>.*?'
+    r'(?P<tip>TV|Movie).*?(?P<epizode>\(\d+ eps\))<br>.*?'
     r'\w+\s(?P<leto>\d+?)\s-\s.*?<br>.*?'
     r'(?P<ogledi>\d*?,?\d*?,*\d*?) members.*?'
-    r'<td class=".*?"><div class=".*?"><i class=".*?"></i><span class="text on">(?P<ocena>\d\.\d\d)</span></div>.*?',
+    r'<td.*?></i><span.*?>(?P<ocena>\d\.\d\d)</span></div>.*?',
     re.DOTALL
 )
+v1= re.compile(r'<.*alt="Anime:(?P<ime>.*?)".*?>.*?')
+# r'<.*alt="Anime:(?P<naslov>.*?)".*?>.*?'
+# r'<div id="(?P<id>area\d+?)".*?'
+# r'(?P<tip>TV|Movie).*?(?P<epizode>\(\d+ eps\))<br>.*?'
+with open('C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/top-anime-1.html', encoding='utf-8') as f:
+    #print(f.read())
+    text = f.read()
+    print(text)
+    #print(re.findall(r'<.*?id="(?P<id>.*?)".*?>(?P<naslov>.*?).*?(?P<tip>\w+).*?', text))
+    #print(re.findall(r'<td.*?></i><span.*?>(?P<ocena>\d\.\d\d)</span></div>.*?', text))
+    print(vzorec.findall(text))
