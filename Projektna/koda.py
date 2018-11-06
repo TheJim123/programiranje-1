@@ -14,22 +14,22 @@ def pripravi_imenik(ime_datoteke):
         os.makedirs(imenik, exist_ok=True)
 
 
-def shrani_spletno_stran(url, ime_datoteke, vsili_prenos=False):
-    '''Vsebino strani na danem naslovu shrani v datoteko z danim imenom.'''
-    try:
-        print('Shranjujem {} ...'.format(url), end='')
-        sys.stdout.flush()
-        if os.path.isfile(ime_datoteke) and not vsili_prenos:
-            print('shranjeno že od prej!')
-            return
-        r = requests.get(url)
-    except requests.exceptions.ConnectionError:
-        print('stran ne obstaja!')
-    else:
-        pripravi_imenik(ime_datoteke)
-        with open(ime_datoteke, 'w', encoding='utf-8') as datoteka:
-            datoteka.write(r.text)
-            print('shranjeno!')
+#def shrani_spletno_stran(url, ime_datoteke, vsili_prenos=False):
+#    '''Vsebino strani na danem naslovu shrani v datoteko z danim imenom.'''
+#    try:
+#        print('Shranjujem {} ...'.format(url), end='')
+#        sys.stdout.flush()
+#        if os.path.isfile(ime_datoteke) and not vsili_prenos:
+#            print('shranjeno že od prej!')
+#            return
+#        r = requests.get(url)
+#    except requests.exceptions.ConnectionError:
+#        print('stran ne obstaja!')
+#    else:
+#        pripravi_imenik(ime_datoteke)
+#        with open(ime_datoteke, 'w', encoding='utf-8') as datoteka:
+#            datoteka.write(r.text)
+#            print('shranjeno!')
 
 
 def vsebina_datoteke(ime_datoteke):
@@ -58,7 +58,7 @@ def zapisi_csv(slovarji, imena_polj, ime_datoteke):
 vzorec = re.compile(
     r'<a.*?id="(?P<id>#area\d+?)".*?'
     r'<.*?alt="Anime:(?P<naslov>.*?)".*?>.*?'
-    r'(?P<tip>TV|Movie).*?(?P<epizode>\(\d+ eps\))<br>.*?'
+    r'(?P<tip>TV|Movie|Special|OVA|ONA).*?(?P<epizode>\(\d+ eps\))<br>.*?'
     r'\w+\s(?P<leto>\d+?)\s-\s.*?<br>.*?'
     r'(?P<ogledi>\d*?,?\d*?,*\d*?) members.*?'
     r'<td.*?></i><span.*?>(?P<ocena>\d\.\d\d)</span></div>.*?',
@@ -89,7 +89,7 @@ for i in range(60):
     vsebina = vsebina_datoteke(
         'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/top-anime-{}.html'.format(i+1))
     for ujemanje_animeja in vzorec.finditer(vsebina):
-        podatki_animeja.append(izloci_podatke_filma(ujemanje_animeja))
+        podatki_animeja.append(izloci_podatke_animeja(ujemanje_animeja))
 # zapisi_json(podatki_animeja, 'obdelani-podatki/vsi-animeji.json')
 zapisi_csv(podatki_animeja, ['id', 'naslov', 'tip', 'epizode',
                             'leto', 'ogledi', 'ocena'], 'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/obdelani-podatki/vsi-animeji.csv')
