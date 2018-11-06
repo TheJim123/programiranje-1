@@ -6,11 +6,13 @@ import sys
 
 import requests
 
+
 def pripravi_imenik(ime_datoteke):
     '''Če še ne obstaja, pripravi prazen imenik za dano datoteko.'''
     imenik = os.path.dirname(ime_datoteke)
     if imenik:
         os.makedirs(imenik, exist_ok=True)
+
 
 def vsebina_datoteke(ime_datoteke):
     '''Vrne niz z vsebino datoteke z danim imenom.'''
@@ -38,6 +40,7 @@ vzorec = re.compile(
     re.DOTALL
 )
 
+
 def izloci_podatke_animeja(ujemanje_animeja):
     podatki_animeja = ujemanje_animeja.groupdict()
     podatki_animeja['id'] = podatki_animeja['id'].strip()
@@ -49,13 +52,23 @@ def izloci_podatke_animeja(ujemanje_animeja):
     podatki_animeja['ocena'] = float(podatki_animeja['ocena'].replace(',', '.'))
     return podatki_animeja
 
+# poskusil ročno obdelati top-anime-25.html datoteko, pri kateri se ves proces zatakne.
+# podatki_animeja = []
+# vsebina = vsebina_datoteke(
+#         'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/top-anime-25.html')
+# for ujemanje_animeja in vzorec.finditer(vsebina):
+#         print(ujemanje_animeja)
+#         # podatki_animeja.append(izloci_podatke_animeja(ujemanje_animeja))
+# print('dodal 25')
+# poskus ni deloval
 
-podatki_animeja = []
-for i in range(20, 30):
-    vsebina = vsebina_datoteke(
-        'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/top-anime-{}.html'.format(i+1))
-    for ujemanje_animeja in vzorec.finditer(vsebina):
-        podatki_animeja.append(izloci_podatke_animeja(ujemanje_animeja))
-# zapisi_json(podatki_animeja, 'obdelani-podatki/vsi-animeji.json')
+for i in range(20, 24):
+        vsebina = vsebina_datoteke(
+                'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/top-anime-{}.html'.format(i+1))
+        for ujemanje_animeja in vzorec.finditer(vsebina):
+                podatki_animeja.append(izloci_podatke_animeja(ujemanje_animeja))
+        print('dodal {}'.format(i+1))
 zapisi_csv(podatki_animeja, ['id', 'naslov', 'tip', 'epizode',
-                            'leto', 'ogledi', 'ocena'], 'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/obdelani-podatki/vsi-animeji-3.csv')
+                            'leto', 'ogledi', 'ocena'], 'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/obdelani-podatki/vsi-animeji-5.csv')
+print('shranil {}'.format('C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/obdelani-podatki/vsi-animeji-5.csv'))
+# zatakne se pri 25
