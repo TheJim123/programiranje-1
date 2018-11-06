@@ -5,9 +5,9 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area28977,Gintama°,TV,(51 eps),2015,219'264,9.13
 #area11061,Hunter x Hunter (2011),TV,(148 eps),2011,793'554,9.11
 #area820,Ginga Eiyuu Densetsu,OVA,(110 eps),1988,136'887,9.1
-#area9969,Gintama&amp;#039;,TV,(51 eps),2011,230'798,9.1
+#area9969,Gintama',TV,(51 eps),2011,230'798,9.1
 #area35180,3-gatsu no Lion 2nd Season,TV,(22 eps),2017,108'259,9.06
-#area15417,Gintama&amp;#039;: Enchousen,TV,(13 eps),2012,134'381,9.06
+#area15417,Gintama': Enchousen,TV,(13 eps),2012,134'381,9.06
 #area28851,Koe no Katachi,Movie,(1 eps),2016,596'238,9.03
 #area15335,Gintama Movie 2: Kanketsu-hen - Yorozuya yo Eien Nare,Movie,(1 eps),2013,113'180,9.02
 #area4181,Clannad: After Story,TV,(24 eps),2008,640'392,9.0
@@ -136,7 +136,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area32282,Shokugeki no Souma: Ni no Sara,TV,(13 eps),2016,435'497,8.45
 #area12029,Uchuu Senkan Yamato 2199,OVA,(26 eps),2012,68'335,8.45
 #area31646,3-gatsu no Lion,TV,(22 eps),2016,221'859,8.44
-#area25537,Fate/stay night Movie: Heaven&amp;#039;s Feel - I. Presage Flower,Movie,(1 eps),2017,125'553,8.44
+#area25537,Fate/stay night Movie: Heaven's Feel - I. Presage Flower,Movie,(1 eps),2017,125'553,8.44
 #area11979,Mahou Shoujo Madoka★Magica Movie 2: Eien no Monogatari,Movie,(1 eps),2012,119'911,8.44
 #area13601,Psycho-Pass,TV,(22 eps),2012,802'759,8.44
 #area2559,Romeo no Aoi Sora,TV,(33 eps),1995,23'946,8.44
@@ -241,7 +241,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area813,Dragon Ball Z,TV,(291 eps),1989,570'879,8.3
 #area138,Hunter x Hunter: Greed Island,OVA,(8 eps),2003,77'827,8.3
 #area22507,Initial D Final Stage,TV,(4 eps),2014,44'671,8.3
-#area28675,Kyoukai no Kanata Movie 2: I&amp;#039;ll Be Here - Mirai-hen,Movie,(1 eps),2015,115'116,8.3
+#area28675,Kyoukai no Kanata Movie 2: I'll Be Here - Mirai-hen,Movie,(1 eps),2015,115'116,8.3
 #area6,Trigun,TV,(26 eps),1998,396'984,8.3
 #area3091,xxxHOLiC Kei,TV,(13 eps),2008,93'102,8.3
 #area6547,Angel Beats!,TV,(13 eps),2010,1'070'065,8.29
@@ -267,7 +267,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area6467,Detective Conan Movie 14: The Lost Ship in the Sky,Movie,(1 eps),2010,29'788,8.26
 #area25681,Kamisama Hajimemashita◎,TV,(12 eps),2015,152'243,8.26
 #area31658,Kuroko no Basket Movie 4: Last Game,Movie,(1 eps),2017,83'469,8.26
-#area10153,Mahou Shoujo Lyrical Nanoha: The Movie 2nd A&amp;#039;s,Movie,(1 eps),2012,16'887,8.26
+#area10153,Mahou Shoujo Lyrical Nanoha: The Movie 2nd A's,Movie,(1 eps),2012,16'887,8.26
 #area11977,Mahou Shoujo Madoka★Magica Movie 1: Hajimari no Monogatari,Movie,(1 eps),2012,121'207,8.26
 #area33051,Mobile Suit Gundam: Iron-Blooded Orphans 2nd Season,TV,(25 eps),2016,60'715,8.26
 #area23755,Nanatsu no Taizai,TV,(24 eps),2014,706'722,8.26
@@ -363,7 +363,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area7465,Eve no Jikan (Movie),Movie,(1 eps),2010,86'611,8.15
 #area72,Full Metal Panic? Fumoffu,TV,(12 eps),2003,212'266,8.15
 #area16918,Gin no Saji,TV,(11 eps),2013,168'704,8.15
-#area25313,Gintama&amp;#039;: Futon ni Haitte kara Buki Nokoshi ni Kizuite Neru ni Nerenai Toki mo Aru,Special,(1 eps),2015,21'002,8.15
+#area25313,Gintama': Futon ni Haitte kara Buki Nokoshi ni Kizuite Neru ni Nerenai Toki mo Aru,Special,(1 eps),2015,21'002,8.15
 #area12189,Hyouka,TV,(22 eps),2012,570'018,8.15
 #area15059,Initial D Fifth Stage,TV,(14 eps),2012,51'247,8.15
 #area1486,Kodomo no Omocha (TV),TV,(102 eps),1996,36'285,8.15
@@ -400,7 +400,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area25879,Working!!!,TV,(13 eps),2015,133'960,8.13
 #area32615,Youjo Senki,TV,(12 eps),2017,291'020,8.13
 #area31173,Akagami no Shirayuki-hime 2nd Season,TV,(12 eps),2016,150'001,8.12
-#area4901,Black Lagoon: Roberta&amp;#039;s Blood Trail,OVA,(5 eps),2010,147'116,8.12
+#area4901,Black Lagoon: Roberta's Blood Trail,OVA,(5 eps),2010,147'116,8.12
 #area2951,Gintama: Nanigoto mo Saiyo ga Kanjin nano de Tasho Senobisuru Kurai ga Choudoyoi,Special,(1 eps),2005,36'346,8.12
 #area17739,Hidamari Sketch: Sae Hiro Sotsugyou-hen,OVA,(2 eps),2013,8'134,8.12
 #area21877,High Score Girl,TV,(12 eps),2018,38'145,8.12
@@ -448,7 +448,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area24997,Love Live! The School Idol Movie,Movie,(1 eps),2015,69'643,8.09
 #area81,Mobile Suit Gundam: The 08th MS Team,OVA,(12 eps),1996,46'790,8.09
 #area21647,Tamako Love Story,Movie,(1 eps),2014,134'639,8.09
-#area1023,Wolf&amp;#039;s Rain OVA,OVA,(4 eps),2004,45'544,8.09
+#area1023,Wolf's Rain OVA,OVA,(4 eps),2004,45'544,8.09
 #area35382,Yuri!!! on Ice: Yuri Plisetsky GPF in Barcelona EX - Welcome to The Madness,Special,(1 eps),2017,27'020,8.09
 #area2563,Aria The OVA: Arietta,OVA,(1 eps),2007,25'376,8.08
 #area3665,Ginga Eiyuu Densetsu Gaiden (1999),OVA,(28 eps),1999,11'118,8.08
@@ -478,7 +478,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area34451,Kekkai Sensen &amp;amp; Beyond,TV,(12 eps),2017,171'448,8.06
 #area36098,Kimi no Suizou wo Tabetai,Movie,(1 eps),2018,34'198,8.06
 #area11739,Kimi to Boku. 2,TV,(13 eps),2012,57'081,8.06
-#area77,Mahou Shoujo Lyrical Nanoha A&amp;#039;s,TV,(13 eps),2005,49'222,8.06
+#area77,Mahou Shoujo Lyrical Nanoha A's,TV,(13 eps),2005,49'222,8.06
 #area28297,Ore Monogatari!!,TV,(24 eps),2015,315'768,8.06
 #area401,Rurouni Kenshin: Meiji Kenkaku Romantan - Seisou-hen,OVA,(2 eps),2001,58'970,8.06
 #area35968,Wotaku ni Koi wa Muzukashii,TV,(11 eps),2018,197'402,8.06
@@ -569,7 +569,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area8408,Durarara!! Specials,Special,(2 eps),2010,124'424,7.99
 #area790,Ergo Proxy,TV,(23 eps),2006,360'539,7.99
 #area11135,Hybrid Child,OVA,(4 eps),2014,41'255,7.99
-#area30745,Kyoukai no Kanata Movie: I&amp;#039;ll Be Here - Kako-hen - Yakusoku no Kizuna,Movie,(1 eps),2015,23'979,7.99
+#area30745,Kyoukai no Kanata Movie: I'll Be Here - Kako-hen - Yakusoku no Kizuna,Movie,(1 eps),2015,23'979,7.99
 #area2143,Saiyuuki Reload: Burial,OVA,(3 eps),2007,9'252,7.99
 #area114,Sakigake!! Cromartie Koukou,TV,(26 eps),2003,89'090,7.99
 #area22319,Tokyo Ghoul,TV,(12 eps),2014,1'096'369,7.99
@@ -715,7 +715,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area30727,Saenai Heroine no Sodatekata ♭,TV,(11 eps),2017,137'790,7.89
 #area7724,Shiki,TV,(22 eps),2010,345'531,7.89
 #area10083,Shiki Specials,Special,(2 eps),2011,47'843,7.89
-#area202,Wolf&amp;#039;s Rain,TV,(26 eps),2003,217'668,7.89
+#area202,Wolf's Rain,TV,(26 eps),2003,217'668,7.89
 #area32998,91 Days,TV,(12 eps),2016,277'650,7.88
 #area32863,Ansatsu Kyoushitsu 2nd Season: Kagaijugyou-hen,ONA,(8 eps),2016,24'130,7.88
 #area9252,Break Blade 3: Kyoujin no Ato,Movie,(1 eps),2010,48'926,7.88
@@ -742,7 +742,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area2753,Ushiro no Shoumen Daare,Movie,(1 eps),1991,6'104,7.88
 #area33253,Ajin 2nd Season,TV,(13 eps),2016,146'425,7.87
 #area10218,Berserk: Ougon Jidai-hen I - Haou no Tamago,Movie,(1 eps),2012,115'983,7.87
-#area1473,City Hunter &amp;#039;91,TV,(13 eps),1991,9'091,7.87
+#area1473,City Hunter '91,TV,(13 eps),1991,9'091,7.87
 #area552,Digimon Adventure,TV,(54 eps),1999,244'298,7.87
 #area317,Final Fantasy VII: Advent Children,Movie,(1 eps),2005,164'534,7.87
 #area28907,"Gate: Jieitai Kanochi nite, Kaku Tatakaeri",TV,(12 eps),2015,402'872,7.87
@@ -779,7 +779,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area24893,Sidonia no Kishi: Daikyuu Wakusei Seneki,TV,(12 eps),2015,82'150,7.86
 #area2582,Soukou Kihei Votoms,TV,(52 eps),1983,13'157,7.86
 #area1921,Urusei Yatsura Movie 2: Beautiful Dreamer,Movie,(1 eps),1984,8'500,7.86
-#area6024,Chi&amp;#039;s Sweet Home: Atarashii Ouchi,TV,(104 eps),2009,20'155,7.85
+#area6024,Chi's Sweet Home: Atarashii Ouchi,TV,(104 eps),2009,20'155,7.85
 #area12117,Detective Conan Movie 16: The Eleventh Striker,Movie,(1 eps),2012,22'190,7.85
 #area14735,Detective Conan Movie 17: Private Eye in the Distant Sea,Movie,(1 eps),2013,19'761,7.85
 #area34430,Detective Conan Movie 21: The Crimson Love Letter,Movie,(1 eps),2017,10'828,7.85
@@ -873,7 +873,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area7305,Detective Conan Movie 10: Promo Special,Movie,(1 eps),2012,90'376,7.8
 #area21659,Kill la Kill Specials,Special,(2 eps),2014,117'814,7.8
 #area10460,Kimi to Boku.,TV,(13 eps),2011,113'383,7.8
-#area25015,Kyoukai no Kanata Movie 1: I&amp;#039;ll Be Here - Kako-hen,Movie,(1 eps),2015,71'012,7.8
+#area25015,Kyoukai no Kanata Movie 1: I'll Be Here - Kako-hen,Movie,(1 eps),2015,71'012,7.8
 #area4454,Macross F: Close Encounter - Deculture Edition,Special,(1 eps),2007,10'124,7.8
 #area18897,Nisekoi,TV,(20 eps),2014,546'672,7.8
 #area1719,Rozen Maiden: Ouvertüre,Special,(2 eps),2006,49'714,7.8
@@ -897,7 +897,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area31483,"Akagami no Shirayuki-hime: Nandemonai Takaramono, Kono Page",OVA,(1 eps),2016,37'245,7.78
 #area22199,Akame ga Kill!,TV,(24 eps),2014,837'065,7.78
 #area33071,Bungou Stray Dogs: Hitori Ayumu,OVA,(1 eps),2017,40'163,7.78
-#area3841,Chi&amp;#039;s Sweet Home,TV,(104 eps),2008,44'819,7.78
+#area3841,Chi's Sweet Home,TV,(104 eps),2008,44'819,7.78
 #area951,Chibi Maruko-chan,TV,(142 eps),1990,6'649,7.78
 #area28669,Go! Princess Precure,TV,(50 eps),2015,8'121,7.78
 #area10350,Hakuouki Sekkaroku,OVA,(6 eps),2011,19'096,7.78
@@ -913,7 +913,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area9510,Mitsudomoe Zouryouchuu!,TV,(8 eps),2011,32'656,7.78
 #area34428,Overlord Movie 2: Shikkoku no Eiyuu,Movie,(1 eps),2017,28'666,7.78
 #area28927,Owari no Seraph: Nagoya Kessen-hen,TV,(12 eps),2015,331'952,7.78
-#area21473,Persona 3 the Movie 2: Midsummer Knight&amp;#039;s Dream,Movie,(1 eps),2014,44'342,7.78
+#area21473,Persona 3 the Movie 2: Midsummer Knight's Dream,Movie,(1 eps),2014,44'342,7.78
 #area31592,Pokemon XY&amp;amp;Z,TV,(47 eps),2015,35'562,7.78
 #area2547,Princess Sara,TV,(46 eps),1985,10'949,7.78
 #area1699,Romeo x Juliet,TV,(24 eps),2007,121'120,7.78
@@ -979,7 +979,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area23385,Kyoukai no Kanata: Shinonome,Special,(1 eps),2014,64'789,7.75
 #area34973,Love Live! Sunshine!! 2nd Season,TV,(13 eps),2017,51'050,7.75
 #area14511,Minami-ke Tadaima,TV,(13 eps),2013,39'927,7.75
-#area87,Mobile Suit Gundam: Char&amp;#039;s Counterattack,Movie,(1 eps),1988,25'542,7.75
+#area87,Mobile Suit Gundam: Char's Counterattack,Movie,(1 eps),1988,25'542,7.75
 #area30347,Nanatsu no Taizai OVA,OVA,(2 eps),2015,73'227,7.75
 #area1011,Ranma ½ Super,OVA,(3 eps),1995,12'414,7.75
 #area21843,Shingeki no Bahamut: Genesis,TV,(12 eps),2014,247'308,7.75
@@ -1406,7 +1406,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area23301,Pokemon XY: Mega Evolution,Special,(4 eps),2014,15'552,7.58
 #area4921,Ramayana: The Legend of Prince Rama,Movie,(1 eps),1992,941,7.58
 #area1372,Taiho Shichau zo (TV),TV,(47 eps),1996,16'254,7.58
-#area5306,Tales of Symphonia The Animation: Tethe&amp;#039;alla-hen,OVA,(4 eps),2010,24'736,7.58
+#area5306,Tales of Symphonia The Animation: Tethe'alla-hen,OVA,(4 eps),2010,24'736,7.58
 #area18499,Yozakura Quartet: Tsuki ni Naku,OVA,(3 eps),2013,19'404,7.58
 #area1050,Bobobo-bo Bo-bobo,TV,(76 eps),2003,54'633,7.57
 #area35459,Boku no Hero Academia: Training of the Dead,OVA,(1 eps),2017,69'582,7.57
@@ -1421,7 +1421,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area36593,Hug tto! Precure,TV,(12 eps),2016,348'216,7.57
 #area8841,Kore wa Zombie Desu ka?,TV,(12 eps),2011,406'426,7.57
 #area2971,Kyou kara Maou! R,OVA,(5 eps),2007,17'297,7.57
-#area33106,Love Live! μ&amp;#039;s Final Love Live! Opening Animation,Special,(1 eps),2016,3'887,7.57
+#area33106,Love Live! μ's Final Love Live! Opening Animation,Special,(1 eps),2016,3'887,7.57
 #area2743,Mobile Suit Gundam SEED: SEED Supernova - Tanekyara Gekijou,Special,(4 eps),2007,6'377,7.57
 #area32792,Mobile Suit Gundam Unicorn RE:0096,TV,(22 eps),2016,16'887,7.57
 #area2835,Patalliro!,TV,(49 eps),1982,3'705,7.57
@@ -1456,7 +1456,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area8100,Mardock Scramble: The First Compression,Movie,(1 eps),2010,53'990,7.56
 #area14527,Medaka Box Abnormal,TV,(12 eps),2012,92'325,7.56
 #area5713,Minami-ke Betsubara,OVA,(1 eps),2009,24'417,7.56
-#area7651,Ningen Shikkaku: Director&amp;#039;s Cut-ban,Movie,(1 eps),2009,5'562,7.56
+#area7651,Ningen Shikkaku: Director's Cut-ban,Movie,(1 eps),2009,5'562,7.56
 #area22539,"One More Time, One More Chance",TV,(13 eps),2010,80'268,7.56
 #area166,Samurai 7,TV,(26 eps),2004,89'945,7.56
 #area18523,Senyuu. 2,TV,(13 eps),2013,41'958,7.56
@@ -1542,7 +1542,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area12679,Joshiraku,TV,(13 eps),2012,71'494,7.53
 #area22763,Kara no Kyoukai: Mirai Fukuin - Extra Chorus,Special,(1 eps),2013,23'216,7.53
 #area32526,Love Live! Sunshine!!,TV,(13 eps),2016,94'331,7.53
-#area34318,Mekakucity V&amp;#039;s,TV,(12 eps),2014,203'733,7.53
+#area34318,Mekakucity V's,TV,(12 eps),2014,203'733,7.53
 #area32026,Osomatsu-san Special,Special,(1 eps),2016,8'330,7.53
 #area23281,Psycho-Pass 2,TV,(11 eps),2014,344'837,7.53
 #area64,Rozen Maiden,TV,(12 eps),2004,152'379,7.53
@@ -1634,7 +1634,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area31297,Tokyo Ghoul: &amp;quot;Pinto&amp;quot;,OVA,(1 eps),2015,97'445,7.5
 #area181,Vandread: The Second Stage,TV,(13 eps),2001,41'929,7.5
 #area35626,Yao Shen Ji,ONA,(40 eps),2017,3'768,7.5
-#area3972,Yu☆Gi☆Oh! 5D&amp;#039;s,TV,(154 eps),2008,68'362,7.5
+#area3972,Yu☆Gi☆Oh! 5D's,TV,(154 eps),2008,68'362,7.5
 #area12149,AKB0048,TV,(13 eps),2012,46'098,7.49
 #area8676,Amagami SS,TV,(25 eps),2010,213'866,7.49
 #area18893,Aoki Hagane no Arpeggio: Ars Nova,TV,(12 eps),2013,110'483,7.49
@@ -1777,7 +1777,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area1222,Bokura ga Ita,TV,(26 eps),2006,158'570,7.45
 #area1536,Busou Renkin,TV,(26 eps),2006,129'973,7.45
 #area1078,Cardcaptor Sakura: Kero-chan ni Omakase!,Movie,(1 eps),2000,24'278,7.45
-#area7972,Chi&amp;#039;s Sweet Home OVA,OVA,(1 eps),2010,5'666,7.45
+#area7972,Chi's Sweet Home OVA,OVA,(1 eps),2010,5'666,7.45
 #area3744,Crayon Shin-chan Movie 10: Arashi wo Yobu Appare! Sengoku Daikassen,Movie,(1 eps),2002,2'228,7.45
 #area15583,Date A Live,TV,(12 eps),2013,463'205,7.45
 #area2665,Doraemon Movie 07: Nobita to Tetsujin Heidan,Movie,(1 eps),1986,2'135,7.45
@@ -1886,7 +1886,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area4715,Shigofumi: Sorekara,Special,(1 eps),2008,13'485,7.43
 #area2978,Shin Getter Robo,OVA,(13 eps),2004,6'104,7.43
 #area7662,Shinrei Tantei Yakumo,TV,(13 eps),2010,96'167,7.43
-#area2942,Sketchbook: Full Color&amp;#039;s,TV,(13 eps),2007,21'071,7.43
+#area2942,Sketchbook: Full Color's,TV,(13 eps),2007,21'071,7.43
 #area1081,Space Pirate Captain Herlock: Outside Legend - The Endless Odyssey,OVA,(13 eps),2002,4'736,7.43
 #area11793,"Tamayura: Hitotose - Attakai Kaze no Omoide, Nanode",Special,(1 eps),2012,6'589,7.43
 #area10629,Tibet Inu Monogatari,Movie,(1 eps),2011,3'829,7.43
@@ -1983,7 +1983,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area35015,Ani ni Tsukeru Kusuri wa Nai!,TV,(12 eps),2017,24'066,7.4
 #area11266,Ao no Exorcist: Kuro no Iede,Special,(1 eps),2011,82'364,7.4
 #area2922,Ashita no Joe 2 (Movie),Movie,(1 eps),1981,2'246,7.4
-#area6676,Asura Cryin&amp;#039; 2,TV,(13 eps),2009,50'715,7.4
+#area6676,Asura Cryin' 2,TV,(13 eps),2009,50'715,7.4
 #area15109,Cuticle Tantei Inaba,TV,(12 eps),2013,67'735,7.4
 #area2393,Doraemon Movie 24: Nobita to Fushigi Kaze Tsukai,Movie,(1 eps),2003,3'049,7.4
 #area505,Fushigiboshi no☆Futagohime,TV,(51 eps),2005,6'774,7.4
@@ -2035,7 +2035,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area6880,Deadman Wonderland,TV,(12 eps),2011,664'955,7.39
 #area6930,Doraemon Movie 29: Shin Nobita no Uchuu Kaitakushi,Movie,(1 eps),2009,1'676,7.39
 #area31201,Doraemon Movie 36: Shin Nobita no Nippon Tanjou,Movie,(1 eps),2016,1'030,7.39
-#area2660,Doraemon: Nobita&amp;#039;s the Night Before a Wedding,Movie,(1 eps),1999,1'369,7.39
+#area2660,Doraemon: Nobita's the Night Before a Wedding,Movie,(1 eps),1999,1'369,7.39
 #area117,El Hazard: The Magnificent World,OVA,(7 eps),1995,12'503,7.39
 #area1250,Erementar Gerad,TV,(26 eps),2005,74'705,7.39
 #area653,Galaxy Angel 3,TV,(26 eps),2002,7'104,7.39
@@ -2072,7 +2072,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area33035,"Yuyushiki: Komarasetari, Komarasaretari",OVA,(1 eps),2017,7'431,7.39
 #area49,Aa! Megami-sama!,OVA,(5 eps),1993,40'102,7.38
 #area3549,Allison to Lillia,TV,(26 eps),2008,33'259,7.38
-#area3006,Atashin&amp;#039;chi,TV,(330 eps),2002,2'138,7.38
+#area3006,Atashin'chi,TV,(330 eps),2002,2'138,7.38
 #area6948,Bakemonogatari Recap,Special,(1 eps),2009,36'347,7.38
 #area1521,Black Jack the Movie,Movie,(1 eps),1996,8'053,7.38
 #area1450,Brigadoon: Marin to Melan,TV,(26 eps),2000,8'101,7.38
@@ -2081,7 +2081,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area332,Dokidoki♡Densetsu: Mahoujin Guruguru,TV,(38 eps),2000,2'638,7.38
 #area19645,Doraemon Movie 34: Shin Nobita no Daimakyou - Peko to 5-nin no Tankentai,Movie,(1 eps),2014,1'450,7.38
 #area21039,Gatchaman Crowds Insight,TV,(12 eps),2015,53'812,7.38
-#area5578,Gosho Aoyama&amp;#039;s Collection of Short Stories,Special,(7 eps),1999,3'200,7.38
+#area5578,Gosho Aoyama's Collection of Short Stories,Special,(7 eps),1999,3'200,7.38
 #area246,Groove Adventure Rave,TV,(51 eps),2001,70'161,7.38
 #area27969,Hana to Alice: Satsujin Jiken,Movie,(1 eps),2015,18'236,7.38
 #area21681,Hanayamata,TV,(12 eps),2014,75'613,7.38
@@ -2194,7 +2194,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area5356,Canaan,TV,(13 eps),2009,154'727,7.35
 #area15611,Cardfight!! Vanguard: Link Joker-hen,TV,(59 eps),2013,12'425,7.35
 #area1678,Cyborg 009: The Cyborg Soldier,TV,(52 eps),2001,19'648,7.35
-#area2515,Detective Conan OVA 05: The Target is Kogoro! The Detective Boys&amp;#039; Secret Investigation,OVA,(1 eps),2007,9'528,7.35
+#area2515,Detective Conan OVA 05: The Target is Kogoro! The Detective Boys' Secret Investigation,OVA,(1 eps),2007,9'528,7.35
 #area2661,Doraemon Movie 13: Nobita to Kumo no Oukoku,Movie,(1 eps),1992,2'656,7.35
 #area381,Fushigi Yuugi: Dai Ni Bu,OVA,(6 eps),1997,15'409,7.35
 #area12875,Ginga e Kickoff!!,TV,(39 eps),2012,15'380,7.35
@@ -2300,7 +2300,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area2383,Cybersix,TV,(13 eps),1999,4'924,7.32
 #area24429,Daze,OVA,(1 eps),2018,19'375,7.32
 #area2648,Doraemon: 2112-nen Doraemon Tanjou,Movie,(1 eps),1995,1'839,7.32
-#area27825,Dragon Nest: Warriors&amp;#039; Dawn,Movie,(1 eps),2014,3'288,7.32
+#area27825,Dragon Nest: Warriors' Dawn,Movie,(1 eps),2014,3'288,7.32
 #area4726,Druaga no Tou: The Sword of Uruk,TV,(12 eps),2009,56'817,7.32
 #area3508,Genius Party,Movie,(7 eps),2007,24'223,7.32
 #area9931,Happy Birthday: Inochi Kagayaku Toki,Movie,(1 eps),1999,2'009,7.32
@@ -2344,7 +2344,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area35159,Kimi no Hikari: Asagao to Kase-san.,OVA,(1 eps),2017,15'036,7.31
 #area3272,Kinnikuman,TV,(137 eps),1983,5'717,7.31
 #area6163,Kuroshitsuji Recap,Special,(1 eps),2009,26'428,7.31
-#area1013,Le Chevalier D&amp;#039;Eon,TV,(24 eps),2006,40'982,7.31
+#area1013,Le Chevalier D'Eon,TV,(24 eps),2006,40'982,7.31
 #area17247,Machine-Doll wa Kizutsukanai,TV,(12 eps),2013,198'305,7.31
 #area5084,Mai Mai Shinko to Sennen no Mahou,Movie,(1 eps),2009,8'968,7.31
 #area21863,Mangaka-san to Assistant-san to The Animation,TV,(12 eps),2014,161'950,7.31
@@ -2393,7 +2393,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area3010,Kaiketsu Zorro,TV,(52 eps),1996,6'784,7.3
 #area28869,Kaitou Joker 2nd Season,TV,(13 eps),2015,3'733,7.3
 #area2544,Kazoku Robinson Hyouryuuki: Fushigi na Shima no Flone,TV,(50 eps),1981,2'787,7.3
-#area34104,Knight&amp;#039;s &amp;amp; Magic,TV,(13 eps),2017,107'789,7.3
+#area34104,Knight's &amp;amp; Magic,TV,(13 eps),2017,107'789,7.3
 #area28623,Koutetsujou no Kabaneri,TV,(12 eps),2016,408'697,7.3
 #area8068,Kuroshitsuji Picture Drama,Special,(1 eps),2010,15'731,7.3
 #area4375,Kyoro-chan,TV,(91 eps),1999,1'548,7.3
@@ -2419,7 +2419,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area3087,Cencoroll,Movie,(1 eps),2009,67'472,7.29
 #area17917,Danball Senki Wars,TV,(37 eps),2013,2'618,7.29
 #area2748,Dash! Kappei,TV,(65 eps),1981,3'432,7.29
-#area6198,Detective Conan OVA 08: High School Girl Detective Sonoko Suzuki&amp;#039;s Case Files,OVA,(1 eps),2002,3'075,7.29
+#area6198,Detective Conan OVA 08: High School Girl Detective Sonoko Suzuki's Case Files,OVA,(1 eps),2002,3'075,7.29
 #area2030,El Cazador de la Bruja,TV,(26 eps),2007,38'534,7.29
 #area376,"Elfen Lied: Tooriame nite Arui wa, Shoujo wa Ikani Shite Sono Shinjou ni Itatta ka? - Regenschauer",Special,(1 eps),2005,140'940,7.29
 #area1126,Figure 17: Tsubasa &amp;amp; Hikaru,TV,(13 eps),2001,8'838,7.29
@@ -2486,7 +2486,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area3457,Vampire Knight,TV,(13 eps),2008,363'609,7.28
 #area9332,.hack//Quantum,OVA,(3 eps),2011,31'760,7.27
 #area34465,Ao no Exorcist: Kyoto Fujouou-hen OVA,OVA,(2 eps),2017,37'570,7.27
-#area1736,B&amp;#039;T X Neo,OVA,(14 eps),1997,3'450,7.27
+#area1736,B'T X Neo,OVA,(14 eps),1997,3'450,7.27
 #area18441,Blood Lad: Wagahai wa Neko de wa Nai,OVA,(1 eps),2013,67'668,7.27
 #area12293,Campione!: Matsurowanu Kamigami to Kamigoroshi no Maou,TV,(13 eps),2012,219'240,7.27
 #area1299,Flag,ONA,(13 eps),2006,13'452,7.27
@@ -2601,7 +2601,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area8362,Crayon Shin-chan Movie 08: Arashi wo Yobu Jungle,Movie,(1 eps),2000,2'438,7.24
 #area1132,Digimon Frontier,TV,(50 eps),2002,99'283,7.24
 #area2123,Digimon X-Evolution,Movie,(1 eps),2005,15'069,7.24
-#area11783,Dog Days&amp;#039;,TV,(13 eps),2012,72'192,7.24
+#area11783,Dog Days',TV,(13 eps),2012,72'192,7.24
 #area2668,Doraemon Movie 20: Nobita no Uchuu Hyouryuuki,Movie,(1 eps),1999,1'678,7.24
 #area1335,Ghost in the Shell: Stand Alone Complex - Tachikoma na Hibi,Special,(26 eps),2002,20'967,7.24
 #area33025,Ginga Kikoutai Majestic Prince Movie: Kakusei no Idenshi,Movie,(1 eps),2016,4'042,7.24
@@ -2714,9 +2714,9 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area762,Bleach: Memories in the Rain,Special,(1 eps),2005,90'110,7.21
 #area35815,Boku dake ga Inai Machi Recap,ONA,(1 eps),2016,10'158,7.21
 #area369,Boogiepop wa Warawanai,TV,(12 eps),2000,61'446,7.21
-#area2043,Cat&amp;#039;s Eye,TV,(73 eps),1983,10'402,7.21
+#area2043,Cat's Eye,TV,(73 eps),1983,10'402,7.21
 #area1312,Chikyuu Bouei Kigyou Dai-Guard,TV,(26 eps),1999,6'030,7.21
-#area1778,Dae Jang Geum: Jang Geum&amp;#039;s Dream,TV,(26 eps),2005,1'923,7.21
+#area1778,Dae Jang Geum: Jang Geum's Dream,TV,(26 eps),2005,1'923,7.21
 #area2962,Digimon Adventure 02 Movies,Movie,(2 eps),2000,32'922,7.21
 #area4798,Druaga no Tou: The Aegis of Uruk - Jil no Bouken,Special,(1 eps),2008,12'192,7.21
 #area32801,Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka OVA,OVA,(1 eps),2016,70'013,7.21
@@ -2777,7 +2777,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area3305,Muteki Koujin Daitarn 3,TV,(40 eps),1978,1'858,7.2
 #area1732,Negima!? Natsu Special!?,Special,(1 eps),2006,14'550,7.2
 #area12221,Precure All Stars Movie New Stage: Mirai no Tomodachi,Movie,(1 eps),2012,3'338,7.2
-#area31919,PriPara Movie: Mi~nna no Akogare♪ Let&amp;#039;s Go☆Prix Paris,Movie,(1 eps),2016,998,7.2
+#area31919,PriPara Movie: Mi~nna no Akogare♪ Let's Go☆Prix Paris,Movie,(1 eps),2016,998,7.2
 #area28215,Saint Seiya: Soul of Gold,ONA,(13 eps),2015,17'605,7.2
 #area1108,Senkaiden Houshin Engi,TV,(26 eps),1999,12'807,7.2
 #area678,Shadow Skill: Eigi,TV,(26 eps),1998,9'625,7.2
@@ -2865,10 +2865,10 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area33994,Servamp Specials,Special,(3 eps),2016,8'911,7.18
 #area5199,Seto no Hanayome Fan Disc,Special,(2 eps),2008,5'930,7.18
 #area1066,Shakugan no Shana Specials,Special,(4 eps),2006,30'035,7.18
-#area30649,Shin Atashin&amp;#039;chi,TV,(26 eps),2015,1'720,7.18
+#area30649,Shin Atashin'chi,TV,(26 eps),2015,1'720,7.18
 #area2452,Space Adventure Cobra,Movie,(1 eps),1982,5'141,7.18
 #area4532,Taiyou no Yuusha Fighbird,TV,(48 eps),1991,1'703,7.18
-#area8909,Tales of Symphonia The Animation: Tethe&amp;#039;alla-hen Specials,Special,(4 eps),2010,6'051,7.18
+#area8909,Tales of Symphonia The Animation: Tethe'alla-hen Specials,Special,(4 eps),2010,6'051,7.18
 #area31486,Tantei Opera Milky Holmes Movie: Gyakushuu no Milky Holmes,Movie,(1 eps),2016,2'573,7.18
 #area566,Tetsuwan Birdy,OVA,(4 eps),1996,19'228,7.18
 #area7654,Tokyo Magnitude 8.0 Recap,Special,(1 eps),2009,5'605,7.18
@@ -2905,7 +2905,7 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area31564,Sansha Sanyou,TV,(12 eps),2016,42'592,7.17
 #area6203,Sasameki Koto,TV,(13 eps),2009,45'408,7.17
 #area33713,Seihou Bukyou Outlaw Star Specials,Special,(2 eps),1998,3'294,7.17
-#area34796,Servamp: Hai ni Mamireta Shoukei - All the world&amp;#039;s a stage,Special,(1 eps),2017,6'173,7.17
+#area34796,Servamp: Hai ni Mamireta Shoukei - All the world's a stage,Special,(1 eps),2017,6'173,7.17
 #area2758,Shippuu! Iron Leaguer,TV,(52 eps),1993,689,7.17
 #area478,Sousei no Aquarion,TV,(26 eps),2005,57'014,7.17
 #area21881,Sword Art Online II,TV,(24 eps),2014,891'875,7.17
@@ -2925,4 +2925,4 @@ id,naslov,tip,epizode,leto,ogledi,ocena
 #area5032,Cobra The Animation,TV,(13 eps),2010,5'547,7.16
 #area31978,Crayon Shin-chan Movie 24: Bakusui! Yumemi World Dai Totsugeki,Movie,(1 eps),2016,844,7.16
 #area2907,Cyborg Kuro-chan,TV,(66 eps),1999,4'508,7.16
-#area9200,Dae Jang Geum: Jang Geum&amp;#039;s Dream 2,TV,(26 eps),2007,747,7.16
+#area9200,Dae Jang Geum: Jang Geum's Dream 2,TV,(26 eps),2007,747,7.16

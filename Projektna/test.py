@@ -33,7 +33,7 @@ def zapisi_csv(slovarji, imena_polj, ime_datoteke):
 vzorec = re.compile(
     r'<a.*?id="(?P<id>#area\d+?)".*?'
     r'<.*?alt="Anime:(?P<naslov>.*?)".*?>.*?'
-    r'(?P<tip>TV|Movie).*?(?P<epizode>\(\d+ eps\))<br>.*?'
+    r'(?P<tip>TV|Movie|Special|OVA|ONA).*?(?P<epizode>\(\d+ eps\))<br>.*?'
     r'\w+\s(?P<leto>\d+?)\s-\s.*?<br>.*?'
     r'(?P<ogledi>\d*?,?\d*?,*\d*?) members.*?'
     r'<td.*?></i><span.*?>(?P<ocena>\d\.\d\d)</span></div>.*?',
@@ -44,7 +44,7 @@ vzorec = re.compile(
 def izloci_podatke_animeja(ujemanje_animeja):
     podatki_animeja = ujemanje_animeja.groupdict()
     podatki_animeja['id'] = podatki_animeja['id'].strip()
-    podatki_animeja['naslov'] = podatki_animeja['naslov'].strip()
+    podatki_animeja['naslov'] = podatki_animeja['naslov'].replace("&amp;#039;", "'").strip()
     podatki_animeja['tip'] = podatki_animeja['tip'].strip()
     podatki_animeja['epizode'] = podatki_animeja['epizode'].strip()
     podatki_animeja['leto'] = int(podatki_animeja['leto'])
@@ -53,7 +53,7 @@ def izloci_podatke_animeja(ujemanje_animeja):
     return podatki_animeja
 
 # poskusil ročno obdelati top-anime-25.html datoteko, pri kateri se ves proces zatakne.
-# podatki_animeja = []
+podatki_animeja = []
 # vsebina = vsebina_datoteke(
 #         'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/top-anime-25.html')
 # for ujemanje_animeja in vzorec.finditer(vsebina):
@@ -62,13 +62,13 @@ def izloci_podatke_animeja(ujemanje_animeja):
 # print('dodal 25')
 # poskus ni deloval
 
-for i in range(20, 24):
+for i in range(60):
         vsebina = vsebina_datoteke(
                 'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/top-anime-{}.html'.format(i+1))
         for ujemanje_animeja in vzorec.finditer(vsebina):
                 podatki_animeja.append(izloci_podatke_animeja(ujemanje_animeja))
+                print(ujemanje_animeja.group('naslov'))
         print('dodal {}'.format(i+1))
 zapisi_csv(podatki_animeja, ['id', 'naslov', 'tip', 'epizode',
-                            'leto', 'ogledi', 'ocena'], 'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/obdelani-podatki/vsi-animeji-5.csv')
-print('shranil {}'.format('C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/obdelani-podatki/vsi-animeji-5.csv'))
+                            'leto', 'ogledi', 'ocena'], 'C:/Users/Jimmy/Documents/GitHub/programiranje-1/Projektna/obdelani-podatki/vsi-animeji.csv')
 # zatakne se pri 25
