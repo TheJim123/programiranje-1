@@ -3,16 +3,9 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "echo",
-            "type": "shell",
-            "command": "echo Hello"
-        },
-        {"label": "OCaml run",
+        {"label": "OCaml",
             "type": "shell",
             "command":
-             "C:\\OCaml64\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml64\\home\\Jimmy\\.opam\\4.06.1+mingw64c\\bin\\ocaml.exe -init \\\"${file}\\\""
-            
-        }
+             "C:\\OCaml64\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml64\\home\\Jimmy\\.opam\\4.06.1+mingw64c\\bin\\ocaml.exe -init \\\"${file}\\\""}
     ]
 }
