@@ -1,5 +1,10 @@
 
 (* ========== Vaja 1: Uvod v OCaml  ========== *)
+let rec reverse seznam acc =  
+  match seznam with
+  | [] -> acc
+  | x :: [] -> x :: acc
+  | x :: xs -> reverse (x :: acc) xs
 
 (*----------------------------------------------------------------------------*]
  Funkcija [penultimate_element] vrne predzadnji element danega seznama. V
@@ -43,9 +48,9 @@ let rec lepsi_get k = function
  - : int list = [1; 1; 2; 2; 3; 3]
 [*----------------------------------------------------------------------------*)
 
-let rec double list = function
+let rec double = function
   | [] -> []
-  | x :: xs -> [x; x] @ double xs 
+  | x :: xs -> (x :: x :: double xs) 
 
 (*----------------------------------------------------------------------------*]
  Funkcija [divide k list] seznam razdeli na dva seznama. Prvi vsebuje prvih [k]
@@ -73,8 +78,12 @@ let rec divide k list =
  - : int list = [0; 0; 0; 0; 0]
 [*----------------------------------------------------------------------------*)
 
-let rec delete = ()
-
+let rec delete k = 
+  let rec delete_aux k acc = function
+    | [] -> failwith "List is too short!"   
+    | x :: xs when k <= 0 -> acc @ xs
+    | x :: xs -> delete_aux (k - 1) (acc @ [x]) xs
+  in delete_aux k []
 (*----------------------------------------------------------------------------*]
  Funkcija [slice i k list] sestavi nov seznam, ki vsebuje elemente seznama
  [list] od vključno [i]-tega do izključno [k]-tega. Predpostavimo, da sta [i] in
@@ -84,7 +93,14 @@ let rec delete = ()
  - : int list = [1; 2; 3]
 [*----------------------------------------------------------------------------*)
 
-let rec slice = ()
+let rec slice i k list= 
+  let rec slice_aux i k list acc = 
+    match i, k, list with
+    | _, _,  [] -> acc
+    | 0, 0, x :: xs -> slice_aux i k acc xs
+    | 0, _, x :: xs -> slice_aux i (k-1) (x :: acc) xs
+    | _, _, x :: xs -> slice_aux (i-1) (k-1) acc xs
+  in reverse (slice_aux i k list [] ) []
 
 (*----------------------------------------------------------------------------*]
  Funkcija [insert x k list] na [k]-to mesto seznama [list] vrine element [x].
