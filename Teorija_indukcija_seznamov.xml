@@ -1,0 +1,49 @@
+[] @ ys = ys
+(x :: xs) @ ys = x :: (xs @ ys)
+
+obrni [] = []
+obrni (x :: xs) = obrni xs @ [x]
+
+dolzina [] = 0
+dolzina (x :: xs) = 1 + dolzina xs
+
+Trd. 1: obrni [x] = [x]
+Dokaz: obrni [x] = obrni(x :: []) = obrni [] @ [x] = [] @ [x] = [x] 
+QED
+
+Trd. 2: dolzina (xs @ ys) = dolzina xs + dolzina ys
+Dokaz: 
+    1.) dolzina ([] @ ys) = dolzina [] + dolzina ys = 0 + dolzina ys = dolzina ys 
+    2.) IP dolzina (xs' @ ys) = dolzina xs' + dolzina ys
+    3.) dolzina ((x :: xs') @ ys) = dolzina (x :: (xs' @ ys)) = 1 + dolzina (xs' @ ys) = 1 + dolzina xs' + dolzina ys = dolzina (x :: xs') + dolzina ys = dolzina xs + dolzina ys
+QED
+
+Trd. 3: xs @ [] = xs
+Dokaz:
+    1.) xs = []: [] @ [] = []
+    2.) IP xs' @ [] = xs'
+    3.) xs = x :: xs': (x :: xs') @ [] = x :: (xs' @ []) = x :: xs' = xs
+QED
+
+Trd. 4: xs @ (ys @ zs) = (xs @ ys) @ zs
+Dokaz:
+    1.) xs = []: [] @ (ys @ zs) = ys @ zs = ([] @ ys) @ zs 
+    2.) IP xs' @ (ys @ zs) = (xs' @ ys) @ zs
+    3.) xs = x :: xs':
+        a.) (x :: xs') @ (ys @ zs) = x :: (xs' @ (ys @ zs)) = x :: ((xs' @ ys) @ zs)
+        b.) (x :: (xs' @ ys)) @ zs = (x :: (xs' @ ys)) = x :: (xs' @ ys) ... (* Asistent izbrisal preden bi lahko prepisal*)
+QED
+
+Trd. 5: obrni (xs @ ys) = obrni ys @ obrni xs
+Dokaz:
+    1.) xs = []: obrni ([] @ ys) = obrni (ys) @ obrni [] = obrni ys @ [] = obrni ys
+    2.) IP obrni (xs' @ ys) = obrni ys @ obrni xs'
+    3.) xs = x :: xs': obrni ((x :: xs) @ ys) = obrni (x :: (xs' @ ys)) = obrni (xs' @ ys) @ [x] = obrni ys @ obrni xs' @ [x] = obrni ys @ obrni (x :: xs') = obrni ys @ obrni xs
+QED
+
+Trd. 6: dolzina (obrni xs) = dolzina xs
+Dokaz:
+    1.) xs = []: dolzina (obrni []) = dolzina ([]) = dolzina []
+    2.) IP dolzina (obrni xs') = dolzina xs'
+    3.) xs = x :: xs': dolzina (obrni (x :: xs')) = dolzina (obrni xs' @ [x]) = dolzina (obrni xs') + dolzina [x] = dolzina xs' + dolzina [x] = dolzina [x] + dolzina xs' = dolzina ([x] @ xs') =
+        = dolzina ((x :: []) @ xs') = dolzina (x :: ([] @ xs')) = dolzina (x :: xs') = dolzina xs
