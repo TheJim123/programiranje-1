@@ -5,7 +5,17 @@
  bodisi prazna, bodisi pa vsebujejo podatek in imajo dve (morda prazni)
  poddrevesi. Na tej točki ne predpostavljamo ničesar drugega o obliki dreves.
 [*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*)
+type 'a tree =
+     | Empty
+     | Node of 'a tree * 'a * 'a tree
 
+(*
+type a' tree =
+     | Empty
+     | Leaf 'a
+     | Node of 'a tree * 'a * 'a tree
+kjer je Leaf 'a = Node (Empty, 'a, Empty)
+*)
 
 (*----------------------------------------------------------------------------*]
  Definirajmo si testni primer za preizkušanje funkcij v nadaljevanju. Testni
@@ -17,8 +27,13 @@
        /   / \
       0   6   11
 [*----------------------------------------------------------------------------*)
+let leaf x = Node(Empty, x, Empty)
 
-
+let test_tree =
+     let left_t = Node(leaf 0, 2, Empty) in
+     let right_t = Node(leaf 6, 7, leaf 11) in
+     Node(left_t, 5, right_t)
+     
 (*----------------------------------------------------------------------------*]
  Funkcija [mirror] vrne prezrcaljeno drevo. Na primeru [test_tree] torej vrne
           5
@@ -32,7 +47,9 @@
  Node (Node (Node (Empty, 11, Empty), 7, Node (Empty, 6, Empty)), 5,
  Node (Empty, 2, Node (Empty, 0, Empty)))
 [*----------------------------------------------------------------------------*)
-
+let rec mirror = function
+     | Empty -> Empty
+     | Node(lt, x, rt) -> Node(mirror rt, x, mirror lt)
 
 (*----------------------------------------------------------------------------*]
  Funkcija [height] vrne višino oz. globino drevesa, funkcija [size] pa število
@@ -43,8 +60,28 @@
  # size test_tree;;
  - : int = 6
 [*----------------------------------------------------------------------------*)
+let rec size = function
+     | Empty -> 0
+     | Node(lt, x, rt) -> 1 + size lt + size rt
 
+let rec height = function
+     | Empty -> 0
+     | Node(Empty, x, Empty) -> 0 
+     | Node(lt, x, rt) -> 1 + height lt + height rt
 
+(*
+repno rekurziven size:
+let tl_rec_size tree =
+     let rec size' acc queue =
+          match queue with
+          | [] -> acc
+          | t :: ts -> (
+               match t with
+               | Empty -> size' acc ts
+               | Node(lt, x, rt) -> size' (acc + 1) (lt :: rt :: ts)
+          )
+          in size' 0 [tree]
+*)
 (*----------------------------------------------------------------------------*]
  Funkcija [map_tree f tree] preslika drevo v novo drevo, ki vsebuje podatke
  drevesa [tree] preslikane s funkcijo [f].
@@ -54,7 +91,11 @@
  Node (Node (Node (Empty, false, Empty), false, Empty), true,
  Node (Node (Empty, true, Empty), true, Node (Empty, true, Empty)))
 [*----------------------------------------------------------------------------*)
-
+let rec map_tree f tree =
+     match tree with
+     | Empty -> Empty
+     | Node(Empty, x, Empty) -> Node(Empty, f x, Empty)
+     | Node(lt, x, rt) -> Node((map_tree f lt), (f x), (map_tree f rt))
 
 (*----------------------------------------------------------------------------*]
  Funkcija [list_of_tree] pretvori drevo v seznam. Vrstni red podatkov v seznamu
@@ -63,7 +104,9 @@
  # list_of_tree test_tree;;
  - : int list = [0; 2; 5; 6; 7; 11]
 [*----------------------------------------------------------------------------*)
-
+let rec list_of_tree = function
+     | Empty -> []
+     | Node(lt, x, rt) -> list_of_tree lt @ [x] @ list_of_tree rt
 
 (*----------------------------------------------------------------------------*]
  Funkcija [is_bst] preveri ali je drevo binarno iskalno drevo (Binary Search 
@@ -75,7 +118,15 @@
  # test_tree |> mirror |> is_bst;;
  - : bool = false
 [*----------------------------------------------------------------------------*)
-
+let rec is_bst = function
+     | Empty -> true
+     | Node(lt, x, rt) -> (
+          match lt, rt with
+          | Empty, Empty -> true
+          | Node(lt1, y, rt1), Empty -> is_bst lt && y < x 
+          | Empty, Node(lt2, z, rt2) -> x < z && is_bst rt
+          | Node(lt1, y, rt1), Node(lt2, z, rt2) -> is_bst lt && y < x && x < z && is_bst rt
+          )
 
 (*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*]
  V nadaljevanju predpostavljamo, da imajo dvojiška drevesa strukturo BST.
@@ -90,7 +141,24 @@
  # member 3 test_tree;;
  - : bool = false
 [*----------------------------------------------------------------------------*)
+let rec member x tree = 
+     match x, tree with 
+     | _, Empty -> false
+     | k, Node(lt, c, rt) when k == c -> true
+     | k, Node(lt, c, rt) when k < c -> member x lt
+     | k, Node(lt, c, rt) when k > c -> member x rt
+     | _, Node(_, _, _) -> false (* Dodal, da se program ne bi jezil, da funkcija ni dovolj izčrpna. *) 
 
+
+let rec insert x tree =
+     match x, tree with
+     | y, Empty -> leaf y
+     | y, Node(lt, z, rt) -> (
+          match member x tree with
+          | true -> tree
+          | false when y < z -> Node((insert y lt), z, rt)
+          | false -> Node(lt, z, (insert y rt)) 
+     )         
 
 (*----------------------------------------------------------------------------*]
  Funkcija [member2] ne privzame, da je drevo bst.
@@ -98,6 +166,11 @@
  Opomba: Premislte kolikšna je časovna zahtevnost funkcije [member] in kolikšna
  funkcije [member2] na drevesu z n vozlišči, ki ima globino log(n). 
 [*----------------------------------------------------------------------------*)
+let rec member2 x tree = 
+     match x, tree with 
+     | _, Empty -> false
+     | k, Node(lt, c, rt) when k == c -> true
+     | _, Node(lt, y, rt) -> member2 x lt || member2 x rt
 
 
 (*----------------------------------------------------------------------------*]
@@ -112,7 +185,15 @@
  # pred (Node(Empty, 5, leaf 7));;
  - : int option = None
 [*----------------------------------------------------------------------------*)
+let rec bst_najmanjsi = function
+     | Empty -> None
+     | Node(Empty, x, Empty) -> Some x
+     | Node (lt, x, rt) -> bst_najmanjsi lt 
 
+let rec succ = function
+     | Empty -> None
+     | Node(Empty, x, Empty) -> None
+     | Node(_, x, rt) -> bst_najmanjsi rt
 
 (*----------------------------------------------------------------------------*]
  Na predavanjih ste omenili dva načina brisanja elementov iz drevesa. Prvi 
