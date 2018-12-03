@@ -97,7 +97,7 @@ let rec slice i k list=
   let rec slice_aux i k list acc = 
     match i, k, list with
     | _, _,  [] -> acc
-    | 0, 0, x :: xs -> slice_aux i k acc xs
+    | 0, 0, x :: xs -> acc
     | 0, _, x :: xs -> slice_aux i (k-1) (x :: acc) xs
     | _, _, x :: xs -> slice_aux (i-1) (k-1) acc xs
   in reverse (slice_aux i k list [] ) []
