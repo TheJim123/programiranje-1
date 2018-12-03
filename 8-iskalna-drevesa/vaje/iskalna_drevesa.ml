@@ -187,14 +187,23 @@ let rec member2 x tree =
 [*----------------------------------------------------------------------------*)
 let rec bst_najmanjsi = function
      | Empty -> None
-     | Node(Empty, x, Empty) -> Some x
-     | Node (lt, x, rt) -> bst_najmanjsi lt 
+     | Node(Empty, x, _) -> Some x
+     | Node (lt, x, rt) -> bst_najmanjsi lt
+     
+let rec bst_najvecji = function
+     | Empty -> None
+     | Node(_, x, Empty) -> Some x
+     | Node(lt, x, rt) -> bst_najvecji rt
 
 let rec succ = function
      | Empty -> None
      | Node(Empty, x, Empty) -> None
-     | Node(_, x, rt) -> bst_najmanjsi rt
+     | Node(_, _, rt) -> bst_najmanjsi rt
 
+let rec pred = function
+     | Empty -> None
+     | Node(Empty, _, Empty) -> None
+     | Node(lt, _, _) -> bst_najvecji lt
 (*----------------------------------------------------------------------------*]
  Na predavanjih ste omenili dva načina brisanja elementov iz drevesa. Prvi 
  uporablja [succ], drugi pa [pred]. Funkcija [delete x bst] iz drevesa [bst] 
