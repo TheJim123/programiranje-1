@@ -1,10 +1,24 @@
 
 (* ========== Vaja 1: Uvod v OCaml  ========== *)
+(*
+let vsota_celih x y =
+  x + y
+
+let prvi = function
+  | [] -> None
+  | x :: xs -> Some x
+
+let drugi_prvi list =
+  match list with 
+  | [] -> None
+  | x :: xs -> Some x
+*)
+
 let rec reverse seznam acc =  
   match seznam with
   | [] -> acc
   | x :: [] -> x :: acc
-  | x :: xs -> reverse (x :: acc) xs
+  | x :: xs -> reverse xs (x :: acc)
 
 (*----------------------------------------------------------------------------*]
  Funkcija [penultimate_element] vrne predzadnji element danega seznama. V
