@@ -218,6 +218,38 @@ let rec pred = function
 [*----------------------------------------------------------------------------*)
 
 
+let integerize = function
+     | Some x -> x
+
+let drugo_drevo = Node(test_tree, 20 , Node(Node(Empty, 23, Empty), 25, Node(Empty, 77, Empty)))
+
+let rec delete x bst =
+     match x, bst with
+     | x, _ when (member x bst) = false -> bst
+     | x, Node(lt, y, rt) when  x > y -> Node(lt, y, (delete x rt))
+     | x, Node(lt, y, rt) when  x < y -> Node((delete x lt), y, rt)
+     | x, Node(Empty, y, Empty) when x = y -> Empty
+     | x, Node(Empty, y, rt) when x = y -> rt
+     | x, Node(lt, y, Empty) when x = y -> lt
+     | x, Node(lt, y, rt) when x = y -> Node(lt, (integerize (bst_najmanjsi rt)), (delete (integerize (bst_najmanjsi rt)) rt))
+
+(*
+let rec delete x tree =
+     match tree with
+     | Empty -> Empty
+     | Node(Empty, y, Empty) when x = y -> Empty
+     | Node(Empty, y, rt) when x = y -> rt
+     | Node(lt, y, Empty) when x = y -> lt
+     | Node(lt, y, rt) when x <> y -> 
+          if x > y then
+               Node(lt, y, delete x rt)
+          else
+               Node(delete x lt, y, rt)
+     | Node(lt, y, rt) ->
+          match succ tree with
+          | None -> failwith "HOW IS THIS POSSIBLE!??"
+          | Some z -> Node(lt, z, delete z rt)
+*)
 (*-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*]
  SLOVARJI
 
@@ -238,7 +270,7 @@ let rec pred = function
          /
      "c":-2
 [*----------------------------------------------------------------------------*)
-
+let test_dict = Node(Node(Empty, ("a", 0), Empty), ("b", 1), Node(Node(Empty, ("c", -2), Empty), ("d", 2), Empty))
 
 (*----------------------------------------------------------------------------*]
  Funkcija [dict_get key dict] v slovarju poišče vrednost z ključem [key]. Ker
@@ -250,7 +282,22 @@ let rec pred = function
  - : int option = Some (-2)
 [*----------------------------------------------------------------------------*)
 
-      
+let rec dict_member key dict_tree = 
+     match key, dict_tree with 
+     | _, Empty -> false
+     | k, Node(lt, (c, d), rt) when k == c -> true
+     | k, Node(lt, (c, d), rt) when k < c -> dict_member key lt
+     | k, Node(lt, (c, d), rt) when k > c -> dict_member key rt
+     | _, Node(_, _, _) -> false (* Dodal, da se program ne bi jezil, da funkcija ni dovolj izčrpna. *) 
+
+let rec dict_get key dict_tree =
+     match dict_tree with
+     | Empty -> None
+     | Node(_, _, _) when (dict_member key dict_tree) = false -> None
+     | Node(lt, (y, z), rt) when key = y -> z
+     | Node(lt, (y, z), rt) when key > y -> dict_get key rt
+     | Node(lt, (y, z), rt) when key < y -> dict_get key lt
+
 (*----------------------------------------------------------------------------*]
  Funkcija [print_dict] sprejme slovar s ključi tipa [string] in vrednostmi tipa
  [int] in v pravilnem vrstnem redu izpiše vrstice "ključ : vrednost" za vsa
@@ -286,4 +333,3 @@ let rec pred = function
  d : 2
  - : unit = ()
 [*----------------------------------------------------------------------------*)
-
