@@ -14,11 +14,11 @@ let drugi_prvi list =
   | x :: xs -> Some x
 *)
 
-let rec reverse seznam acc =  
+let rec reverse acc seznam  =  
   match seznam with
   | [] -> acc
   | x :: [] -> x :: acc
-  | x :: xs -> reverse xs (x :: acc)
+  | x :: xs -> reverse (x :: acc) xs 
 
 (*----------------------------------------------------------------------------*]
  Funkcija [penultimate_element] vrne predzadnji element danega seznama. V
@@ -107,6 +107,7 @@ let rec delete k =
  - : int list = [1; 2; 3]
 [*----------------------------------------------------------------------------*)
 
+(*
 let rec slice i k list= 
   let rec slice_aux i k list acc = 
     match i, k, list with
@@ -115,7 +116,14 @@ let rec slice i k list=
     | 0, _, x :: xs -> slice_aux i (k-1) (x :: acc) xs
     | _, _, x :: xs -> slice_aux (i-1) (k-1) acc xs
   in reverse (slice_aux i k list [] ) []
-
+*)
+let rec slice i k list =
+  let rec slice' i k acc = function
+    | [] -> []
+    | x :: xs when (i <> 0 && k <> 0) -> slice' (i-1) (k-1) acc xs
+    | x :: xs when (i = 0 && k <> 0) -> slice' i (k-1) (x :: acc) xs
+    | x :: xs when (i = 0 && k = 0) -> acc
+  in reverse [] (slice' i k [] list)
 (*----------------------------------------------------------------------------*]
  Funkcija [insert x k list] na [k]-to mesto seznama [list] vrine element [x].
  Če je [k] izven mej seznama, ga funkcija doda na začetek oziroma na konec.

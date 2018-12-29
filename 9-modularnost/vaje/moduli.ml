@@ -74,8 +74,28 @@ end
 module Nat_int : NAT = struct
 
   type t = int
-  let eq x y = failwith "later"
-  let zero = 0
+  let eq x y = 
+    if x = y then true
+    else false
+  
+  let zero = 0 (* Vnaprej definirano *)
+  let one = 1
+  let add x y = x + y
+  let subtract x y = 
+    match (x-y) with
+    | k when k < 0 -> failwith "Ups, tole pa ni naravno število!"
+    | k when k >= 0 -> x-y
+  
+  let multiply x y = x * y
+
+  let of_int = function
+    | x when x < 0 -> failwith "Daj no Rajko, ne jebi, to ni naravno število!"
+    | x when x >= 0 -> x
+
+  let to_int = function
+    | x when x >= 0 -> x
+    | x when x < 0 -> failwith "Rajko, spelji se, to ni naravno število!"
+
   (* Dodajte manjkajoče! *)
 
 end
@@ -94,11 +114,62 @@ end
 
 module Nat_peano : NAT = struct
 
-  type t = unit (* To morate spremeniti! *)
-  let eq x y = failwith "later"
-  let zero = () (* To morate spremeniti! *)
+  type t = int (* To morate spremeniti! *)
+  
+  
+  let zero = 0
+  
+  let naslednik = function
+  | x when x >= zero -> x + 1 (* To morate spremeniti! *)
+  | x when x < zero -> failwith "Tole pa ni naravno število!"
+  
+  let one = naslednik zero
+  
+  let predhodnik = function
+  | x when x = zero -> failwith "Naravno število 0 nima naravnega predhodnika!"
+  | x when x > zero -> x - 1 
+  | x when x < zero -> failwith "Naravna števila ne vsebujejo negativnih celih števil!" 
+  
+  let eq x y =
+    match x, y with
+    | 0, 0 -> true
+    | 0, _ -> false
+    | k, h when predhodnik k = predhodnik h -> true
+    | k, h when predhodnik k <> predhodnik h -> false
+  
+  
   (* Dodajte manjkajoče! *)
+  
+  let rec add x y =
+    match x, y with
+    | 0, 0 -> 0
+    | 0, b -> b
+    | a, 0 -> a
+    | a, b -> add (naslednik a) (predhodnik b)
+  
+  (* s - k = ((s-1) + 1) - ((k-1) + 1) = (s-1) - (k-1) + 1 - 1 = (s-1) - (k-1) *)
+  let rec subtract x y = 
+    match x, y with
+    | 0, 0 -> 0
+    | a, 0 -> a
+    | 0, _ -> failwith "Opala, tole pa niso več naravna števila!"
+    | a, b -> subtract (predhodnik a) (predhodnik b)
 
+  let rec multiply x y = 
+    match x, y with
+    | 1, 1 -> 1
+    | 1, b -> b
+    | a, 1 -> a
+    | a, b -> add a (multiply a (subtract b 1))
+
+  let rec of_int = function
+  | 0 -> 0
+  | x when x > 0 -> naslednik (of_int (x-1))
+  | x when x < 0 -> failwith "Daj no Rajko, ne jebi, to ni naravno število!"
+
+  let rec to_int = function
+    | 0 -> 0
+    | x -> 1 + to_int (predhodnik x)
 end
 
 (*----------------------------------------------------------------------------*]
@@ -202,4 +273,4 @@ end
  - : unit = ()
 [*----------------------------------------------------------------------------*)
 
-let count (module Dict : DICT) list = ()
+(* let count (module Dict : DICT) list = () *)
