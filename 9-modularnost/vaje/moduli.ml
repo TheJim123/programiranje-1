@@ -75,8 +75,9 @@ module Nat_int : NAT = struct
 
   type t = int
   let eq x y = 
-    if x = y then true
-    else false
+    match x, y with
+    | z, w when z == w -> true
+    | z, w when z <> w -> false
   
   let zero = 0 (* Vnaprej definirano *)
   let one = 1
@@ -89,8 +90,8 @@ module Nat_int : NAT = struct
   let multiply x y = x * y
 
   let of_int = function
-    | x when x < 0 -> failwith "Daj no Rajko, ne jebi, to ni naravno število!"
     | x when x >= 0 -> x
+    | x when x < 0 -> failwith "Daj no Rajko, ne jebi, to ni naravno število!"
 
   let to_int = function
     | x when x >= 0 -> x
