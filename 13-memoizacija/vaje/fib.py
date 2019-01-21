@@ -5,7 +5,13 @@ from functools import lru_cache
 # fail there?
 
 # First define fib as a recursive function.
+
 def fib(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+
 
 # Define fib as a recursive function, but using the lru_cache decorater to
 # memoize results.
