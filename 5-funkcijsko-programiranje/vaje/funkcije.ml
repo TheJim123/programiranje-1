@@ -189,14 +189,17 @@ let unzip_tlrec list =
  # fold_left_no_acc (^) ["F"; "I"; "C"; "U"; "S"];;
  - : string = "FICUS"
 [*----------------------------------------------------------------------------*)
+let first_element = function
+    | [] -> failwith "Prazen seznam nima prvega elementa!"
+    | y :: ys -> y
 
-let fold_left_no_acc f list =
-  let rec fold_left_no_acc' f list acc =
+let fold_left_no_acc list (f) =
+  let rec fold_left_no_acc' list (f) acc =
     match list with
-    | [] -> reverse [] acc
-    | x :: y :: ys -> fold_left_no_acc' f (y :: ys) ((f acc x) :: acc)
-    | y :: [] -> failwith "seznam ni dovolj dolg!"
-  in fold_left_no_acc' f list []
+    | []  -> first_element (reverse [] acc)
+    | x :: xs when acc == [] -> fold_left_no_acc' (xs) (f) (x :: [])
+    | y :: ys -> fold_left_no_acc' (ys) (f) ((f (first_element acc) y) :: [])
+  in fold_left_no_acc' (f) list []
 
 (*----------------------------------------------------------------------------*]
  Funkcija [apply_sequence f x n] vrne seznam zaporednih uporab funkcije [f] na
