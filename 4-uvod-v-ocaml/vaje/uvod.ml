@@ -134,7 +134,30 @@ let rec slice i k list =
  - : int list = [1; 0; 0; 0; 0; 0]
 [*----------------------------------------------------------------------------*)
 
-let rec insert = ()
+(*
+let insert x k list =
+  let l = List.length list in
+  match k with
+  | _ when l = 0 -> []
+  | i when i < 0 -> x :: list
+  | i when i > l -> list @ [x]
+  | i -> 
+    let left, right = divide i list in
+    left @ [x] @ right
+
+*)
+
+let rec insert x k list =
+  let l = List.length list in
+  let rec insert' x k list acc =
+    match k, list with
+    | _, [] -> (reverse [] (x :: acc))
+    | i, y :: ys when i < 0 -> x :: y :: ys
+    | i, y :: ys when i > (l-1) -> (y :: ys) @ [x]
+    | 0, _ -> (reverse [] (x :: acc)) @ list
+    | i, y :: ys -> insert' x (i-1) ys (y :: acc)
+  in insert' x k list []
+
 
 (*----------------------------------------------------------------------------*]
  Funkcija [rotate n list] seznam zavrti za [n] mest v levo. Predpostavimo, da
@@ -144,7 +167,13 @@ let rec insert = ()
  - : int list = [3; 4; 5; 1; 2]
 [*----------------------------------------------------------------------------*)
 
-let rec rotate = ()
+let rec rotate n list = 
+  let rec rotate' n list acc =
+    match n, list with
+    | _, [] -> []
+    | 0, _ -> list @ (reverse [] acc)
+    | i, y :: ys -> rotate' (i - 1) ys (y :: acc)
+  in rotate' n list []
 
 (*----------------------------------------------------------------------------*]
  Funkcija [remove x list] iz seznama izbriše vse pojavitve elementa [x].
@@ -153,7 +182,13 @@ let rec rotate = ()
  - : int list = [2; 3; 2; 3]
 [*----------------------------------------------------------------------------*)
 
-let rec remove = ()
+let rec remove x list = 
+  let rec remove' x list acc =
+    match x, list with
+    | _, [] -> reverse [] acc
+    | z, y :: ys when z <> y -> remove' x ys (y :: acc) 
+    | z, y :: ys -> remove' x ys acc
+  in remove' x list []
 
 (*----------------------------------------------------------------------------*]
  Funkcija [is_palindrome] za dani seznam ugotovi ali predstavlja palindrom.
@@ -164,8 +199,25 @@ let rec remove = ()
  # is_palindrome [0; 0; 1; 0];;
  - : bool = false
 [*----------------------------------------------------------------------------*)
+let first_element = function
+    | [] -> failwith "Prazen seznam nima prvega elementa!"
+    | y :: ys -> y
 
-let rec is_palindrome = ()
+let oklesten_seznam list =
+  let rec oklesten_seznam' acc list =
+    let l = List.length acc in
+    match list with
+    | [] -> []
+    | y :: ys when l = 2 -> y :: ys
+    | y :: ys -> oklesten_seznam' (y :: acc) (reverse [] ys)
+  in oklesten_seznam' [] list
+
+let rec is_palindrome list =
+  let reversed = reverse [] list in
+  match list with
+    | [] -> true
+    | y :: ys when y == (first_element reversed) -> is_palindrome (oklesten_seznam (y :: ys))
+    | y :: ys -> false
 
 (*----------------------------------------------------------------------------*]
  Funkcija [max_on_components] sprejme dva seznama in vrne nov seznam, katerega
@@ -176,7 +228,13 @@ let rec is_palindrome = ()
  - : int list = [5; 4; 3; 3; 4]
 [*----------------------------------------------------------------------------*)
 
-let rec max_on_components = ()
+let max_on_components list1 list2 =
+  let rec max_on_components' list1 list2 acc =
+    match list1, list2 with
+    | [], _ | _, [] -> reverse [] acc
+    | x :: xs, y :: ys when x >= y -> max_on_components' xs ys (x :: acc)
+    | x :: xs, y :: ys -> max_on_components' xs ys (y :: acc)
+  in max_on_components' list1 list2 []
 
 (*----------------------------------------------------------------------------*]
  Funkcija [second_largest] vrne drugo največjo vrednost v seznamu. Pri tem se
@@ -187,5 +245,20 @@ let rec max_on_components = ()
  # second_largest [1; 10; 11; 11; 5; 4; 10];;
  - : int = 10
 [*----------------------------------------------------------------------------*)
+let largest list =
+  let rec largest' list acc =
+    match list with
+    | [] -> first_element acc
+    | y :: ys when [y] > acc ->
+      let new_acc = [y] in
+      largest' ys new_acc
+    | y :: ys -> largest' ys acc
+  in largest' list []
 
-let rec second_largest = ()
+
+let second_largest list =
+  match list with 
+    | [] -> failwith "prazen seznam nima največjega elementa!"
+    | y :: ys -> 
+    let najvecji = largest list in
+    largest (remove najvecji (y :: ys))
